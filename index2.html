@@ -7,14 +7,20 @@
     </head>
     <body>
         <script>
-            let login = prompt('Enter login');
-            let message = (login == 'Employee') ?
-                'Hello' :
-                (login == 'Director') ?
-                'Greetings' :
-                (login == '') ?
-                'No login' :
-                '';
-            alert(message);
+            let userName = prompt('Who there?', '');
+            if (userName == 'Admin') {
+            let pass = prompt('Password?', '');
+            if (pass == 'TheMaster') {
+                alert('Welcome!');
+                } else if (pass = '' || pass == null) {
+                alert('Canceled');
+                } else {
+                alert('Wrong password');
+                }
+            } else if (userName == '' || userName == null) {
+            alert('Canceled');
+            } else {
+            alert('I dont know you');
+            }
         </script>
     </body>
